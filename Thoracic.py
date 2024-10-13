@@ -71,7 +71,7 @@ clf_xgb.fit(X_train,
             verbose=True,
             eval_set=[(X_test, y_test)])
 
-# %%
+# %% model accuracy in predicting 1 year survival
 clf_pred = clf_xgb.predict(X_test)
 cm = confusion_matrix(y_test, clf_pred)
 print(cm)
