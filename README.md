@@ -43,8 +43,6 @@ The script provides the following model evaluation metrics:
 - **Confusion Matrix**
 - **Features Importance**
 
-These metrics help assess the performance of the model in predicting one-year survival status.
-
 
 ## Acknowledgements
 - Dataset source: [Thoracic Surgery Risk of Survival Dataset](https://archive.ics.uci.edu/ml/datasets/Thoracic+Surgery+Data)
