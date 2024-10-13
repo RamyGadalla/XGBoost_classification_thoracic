@@ -41,6 +41,7 @@ The script provides the following model evaluation metrics:
 - **Accuracy**
 - **Precision**
 - **Confusion Matrix**
+- **Features Importance**
 
 These metrics help assess the performance of the model in predicting one-year survival status.
 
