@@ -9,7 +9,7 @@ from sklearn.model_selection import GridSearchCV # cross validation
 from sklearn.metrics import ConfusionMatrixDisplay # creates and draws a confusion matrix
 from sklearn.metrics import confusion_matrix, accuracy_score
 
-# %%
+# %% Load dataset
 with open('ThoraricSurgery.arff', 'r') as file:
     raw_data = arff.load(file)
 
@@ -49,7 +49,7 @@ df.dtypes
 sum(df['Risk1Yr'])/len(df['Risk1Yr'])
 
 # %%
-# Splilt dataframe
+# Splilt dataframe training and test datasets
 X = df.drop('Risk1Yr', axis=1).copy() 
 y = df['Risk1Yr'].copy()
 
@@ -58,7 +58,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, stratify=y)
 # %%
 sum(y==False)/sum(y==True)
 
-# %%
+# %% build preliminary model
 clf_xgb = xgb.XGBClassifier(enable_categorical=True,
                         tree_method = 'hist',
                     eval_metric= 'aucpr',
@@ -93,7 +93,7 @@ print(cm)
 accuracy = accuracy_score(y_test, clf_pred)
 print(accuracy)
 
-# %%
+# %% optimize model hyperparameters
 param_grid = {
     'max_depth': [3, 4, 5],
     'learning_rate': [0.1, 0.01, 0.05],
@@ -130,7 +130,7 @@ optimal_params.fit(X_train,
 print(optimal_params.best_params_)
 
 
-# %%
+# %% Build model with optimal parameters
 clf_xgb = xgb.XGBClassifier(
                             gamma=1.0,
                             learning_rate=0.01,
