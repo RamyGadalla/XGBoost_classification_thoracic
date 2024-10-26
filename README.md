@@ -42,7 +42,8 @@ The script provides the following model evaluation metrics:
 - **Precision**
 - **Confusion Matrix**
 - **Features Importance**
-
+  ![](https://github.com/RamyGadalla/XGBoost_classification_thoracic/blob/main/images/SHAP.png)
+  ![](https://github.com/RamyGadalla/XGBoost_classification_thoracic/blob/main/images/Tree.png)
 
 ## Acknowledgements
 - Dataset source: [Thoracic Surgery Risk of Survival Dataset](https://archive.ics.uci.edu/ml/datasets/Thoracic+Surgery+Data)
