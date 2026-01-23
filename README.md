@@ -20,7 +20,7 @@ To run the script, you will need the following Python packages:
 ## Usage
 1. Clone the repository:
 ```sh
-git clone https://github.com/yourusername/thoracic_surgery_classification.git
+git clone https://github.com/RamyGadalla/thoracic_surgery_classification.git
 ```
 
 ## Dataset
